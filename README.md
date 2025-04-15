@@ -78,7 +78,7 @@ Em resumo,
 
 1. **Clone o projeto**:  
    ```bash
-   git clone https://github.com/seu-usuario/sql-study-notes.git
+   git clone https://github.com/Isaisabelabela/JoinMeInSQL
 
 
 ## ✨ Créditos
