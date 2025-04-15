@@ -96,7 +96,17 @@ UPDATE produtos SET preco = 59.90 WHERE id = 1;
 -- DELETE: remove dados
 DELETE FROM produtos WHERE id = 2;
 
+### 🔍 Filtros (`WHERE`, `ORDER BY`, `GROUP BY`)
+Filtros ajudam a encontrar exatamente o que você precisa nos dados.
+``` sql
+-- WHERE: filtra registros
+SELECT * FROM clientes WHERE cidade = 'São Paulo';
 
+-- ORDER BY: ordena os dados
+SELECT * FROM produtos ORDER BY preco DESC;
+
+-- GROUP BY: agrupa dados com base em uma coluna
+SELECT categoria, COUNT(*) FROM produtos GROUP BY categoria;
 
 
 ## 🛠️ Como Usar Este Repositório  
