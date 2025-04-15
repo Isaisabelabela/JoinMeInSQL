@@ -46,9 +46,9 @@ Em resumo,
 ## 📌 Conteúdo Detalhado  
 
 ### 1️⃣ **Fundamentos (Basics)**  
-- Sintaxe básica (`SELECT`, `INSERT`, `UPDATE`, `DELETE`)  
-- Filtros (`WHERE`, `ORDER BY`, `GROUP BY`)  
-- Junções (`INNER JOIN`, `LEFT JOIN`, etc.)  
+- [📌 Sintaxe básica](#-sintaxe-básica-select-insert-update-delete) (`SELECT`, `INSERT`, `UPDATE`, `DELETE`)  
+- [🔍 Filtros](#-filtros-where-order-by-group-by) (`WHERE`, `ORDER BY`, `GROUP BY`)  
+- [🔗 Junções](#-junções-inner-join-left-join-etc) (`INNER JOIN`, `LEFT JOIN`, etc.)  
 
 ### 2️⃣ **Intermediário (Intermediate)**  
 - Subconsultas (subqueries)  
@@ -74,6 +74,31 @@ Em resumo,
 
 ---
 
+
+
+
+---
+
+### 📌 Sintaxe básica (`SELECT`, `INSERT`, `UPDATE`, `DELETE`)
+
+Esses são os blocos de construção do SQL, usados para interagir com os dados:
+
+```sql
+-- SELECT: busca dados
+SELECT * FROM produtos;
+
+-- INSERT: insere dados
+INSERT INTO produtos (nome, preco) VALUES ('Camiseta', 49.90);
+
+-- UPDATE: atualiza dados existentes
+UPDATE produtos SET preco = 59.90 WHERE id = 1;
+
+-- DELETE: remove dados
+DELETE FROM produtos WHERE id = 2;
+
+
+
+
 ## 🛠️ Como Usar Este Repositório  
 
 1. **Clone o projeto**:  
@@ -83,3 +108,4 @@ Em resumo,
 
 ## ✨ Créditos
 Criado por Isabela com ❤️ e SELECT * FROM conhecimento
+
