@@ -95,6 +95,7 @@ UPDATE produtos SET preco = 59.90 WHERE id = 1;
 
 -- DELETE: remove dados
 DELETE FROM produtos WHERE id = 2;
+```
 
 ### 🔍 Filtros (`WHERE`, `ORDER BY`, `GROUP BY`)
 Filtros ajudam a encontrar exatamente o que você precisa nos dados.
@@ -107,7 +108,20 @@ SELECT * FROM produtos ORDER BY preco DESC;
 
 -- GROUP BY: agrupa dados com base em uma coluna
 SELECT categoria, COUNT(*) FROM produtos GROUP BY categoria;
+```
+### 🔗 Junções ('WINNER JOIN', 'LEFT JOIN', etc).
+Junções são usadas para combinar dados de tabelas diferentes.
+```sql
+-- INNER JOIN: mostra apenas registros com correspondência nas duas tabelas
+SELECT pedidos.id, clientes.nome
+FROM pedidos
+INNER JOIN clientes ON pedidos.cliente_id = clientes.id;
 
+-- LEFT JOIN: mostra todos os registros da tabela da esquerda, mesmo sem correspondência
+SELECT produtos.nome, categorias.nome AS categoria
+FROM produtos
+LEFT JOIN categorias ON produtos.categoria_id = categorias.id;
+``` 
 
 ## 🛠️ Como Usar Este Repositório  
 
