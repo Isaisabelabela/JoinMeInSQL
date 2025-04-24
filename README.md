@@ -123,6 +123,47 @@ FROM produtos
 LEFT JOIN categorias ON produtos.categoria_id = categorias.id;
 ``` 
 
+## 🔍 O que é uma operação de varredura simples (Full Table Scan)?
+Uma operação de varredura simples (também chamada de full table scan) acontece quando o banco de dados varre linha por linha de uma tabela inteira, sem usar nenhum índice para filtrar ou localizar os dados.
+## 📦 Como funciona:
+
+--Imagine que você tem a tabela:
+
+Clientes(id, nome, cidade, idade)
+
+E você faz:
+``` sql
+SELECT nome FROM Clientes WHERE cidade = 'Belo Horizonte';
+``` 
+Se não houver índice sobre a coluna cidade, o banco de dados:
+
+1. Vai pegar a tabela do início;
+2. Ler todas as linhas, uma por uma;
+3. Testar a condição cidade = 'Belo Horizonte';
+4. E só então mostrar os nomes que satisfazem a condição.
+
+## 🔥 Problemas de uma varredura completa:
+🐢 Mais lenta em tabelas grandes
+💾 Gasta muito I/O (leitura de disco)
+🧠 Usa mais CPU
+😩 Pode afetar o desempenho do sistema em consultas frequentes
+
+## ✅ Quando ela pode ser aceitável?
+- A tabela é pequena (poucas linhas)
+- Você quer todos os dados da tabela
+- A condição do WHERE retorna muitos registros (índice não vale a pena)
+- Ainda não existem índices criados na coluna filtrada
+
+## 🏗️ Como o otimizador decide?
+O SGBD analisa:
+- Tamanho da tabela
+- Se há índice na coluna consultada
+- Estatísticas de seletividade
+- Custo estimado das opções
+
+Se for mais “barato” fazer a leitura inteira do que seguir um índice mal seletivo, ele faz a varredura.
+
+
 ## 🛠️ Como Usar Este Repositório  
 
 1. **Clone o projeto**:  
