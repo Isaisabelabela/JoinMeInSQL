@@ -45,7 +45,7 @@ Em resumo,
 - 💬 SQL é a linguagem que você usa para interagir, organizar e manipular essas informações
 
 
-##Diferença entre SQL, MySQL, PostgreSQL e Oracle Database
+## Diferença entre SQL, MySQL, PostgreSQL e Oracle Database
 No mundo dos bancos de dados, nomes como MySQL, PostgreSQL e Oracle aparecem o tempo todo. Mas o que será que muda de um para o outro?
 
 
